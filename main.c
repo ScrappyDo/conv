@@ -9,7 +9,7 @@ float value, fahr, kel, cel;
 
 int main(int argc, char **argv)
 {
-    char id = 0 ;
+    char id = 0 ;                     /*accepted values*/
     if (argc == 1)
     {
         scanf("%f", &value);
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
             id = argv[2][0];
     }
     
-    if (id == 'C'|| id == 'c')
+    if (id == 'C'|| id == 'c')        /* The determination of the scale for counting*/
     {
         FromCelsus();
     }
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
     }
     
 }
-void FromCelsus(){
+void FromCelsus(){                    /*Translation from celsius to other two scaleand conclusion result*/
     if (value > -273.15 )
     {
     fahr = value*1.80+32.00;
@@ -54,7 +54,7 @@ void FromCelsus(){
     }
     
 }
-void FromFahr(){
+void FromFahr(){                       /*Translation from Farenheit to other two scale and conclusion result*/
     if (value >= -459.67 )
     {
     cel = (5.00/9.00)*(value-32.00);
@@ -66,7 +66,7 @@ void FromFahr(){
         printf("Please try again (temperature below, then absolute zero)\n");
     }
 }
-void FromKelvin(){
+void FromKelvin(){                     /*Translation from Kelvin to other two scale and conclusion result*/
     if (value >= 0.00 )
     {
     cel = value - 273.15;
@@ -78,7 +78,7 @@ void FromKelvin(){
         printf("Please try again (temperature below, then absolute zero)\n");
     }
 }
-void Withoutid()
+void Withoutid()                    /*Translation degrees without scale and conclusion resalt in three scale*/
 {
     if (value >= -273.15 )
     {
